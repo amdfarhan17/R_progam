@@ -1,4 +1,4 @@
-# Define functions for each shape
+
 area_rectangle <- function(length, width) {
   return(length * width)
 }
@@ -15,17 +15,17 @@ area_triangle <- function(base, height) {
   return((base * height) / 2)
 }
 
-# Display menu
+
 cat("Area Calculator\n")
 cat("1. Rectangle\n")
 cat("2. Square\n")
 cat("3. Circle\n")
 cat("4. Triangle\n")
 
-# Read user choice2
+
 choice <- as.integer(readline(prompt = "Enter your choice (1-4): "))
 
-# Calculate area based on choice
+
 if (choice == 1) {
   length <- as.numeric(readline(prompt = "Enter length: "))
   width <- as.numeric(readline(prompt = "Enter width: "))
