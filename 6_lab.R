@@ -1,0 +1,27 @@
+perform_string_manipulations <- function(input_string)
+{
+  cat("\nOriginal String:", input_string, "\n")
+  upper_str <- toupper(input_string)
+  cat("1. Uppercase:", upper_str, "\n")
+  lower_str <- tolower(input_string)
+  cat("2. Lowercase:", lower_str, "\n")
+  str_length <- nchar(input_string)
+  cat("3. Length of string:", str_length, "\n")
+  substring_str <- substr(input_string, 1, 5)
+  cat("4. Substring (first 5 chars):", substring_str, "\n")
+  replaced_str <- gsub("a", "X", input_string, ignore.case = TRUE)
+  cat("5. Replace 'a' with 'X':", replaced_str, "\n")
+  split_str <- strsplit(input_string, " ")[[1]]
+  cat("6. Split by spaces:", paste(split_str, collapse = ", "), "\n")
+  trimmed_str <- trimws(input_string)
+  cat("7. Trimmed string:", trimmed_str, "\n")
+  starts_with <- startsWith(input_string, "A")
+  cat("8. Starts with 'A':", starts_with, "\n")
+  ends_with <- endsWith(input_string, "Z")
+  cat("9. Ends with 'Z':", ends_with, "\n")
+  concatenated_str <- paste(input_string, " - FArhan ")
+  cat("10. Concatenated:", concatenated_str, "\n")
+}
+
+user_input <- readline(prompt = "Enter a string to manipulate: ")
+perform_string_manipulations(user_input)
